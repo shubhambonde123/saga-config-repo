@@ -1,20 +1,11 @@
 server:
-
- port:8084
-
+  port: 8084
 
 spring:
-
- application:
-
-  name: SAGA-ORCHESTRATOR
-
+  application:
+    name: SAGA-ORCHESTRATOR
 
 eureka:
-
- client:
-
-  service-url:
-
-   defaultZone:
-    http://localhost:8761/eureka
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
