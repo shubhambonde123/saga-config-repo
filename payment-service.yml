@@ -1,12 +1,15 @@
 server:
-  port: 8082
+  port: 8083
 
 spring:
   application:
     name: PAYMENT-SERVICE
 
+  config:
+    import: optional:configserver:http://localhost:8888
+
   datasource:
-    url: jdbc:mysql://localhost:3306/paymentdb
+    url: jdbc:mysql://localhost:3306/payment_db
     username: root
     password: Root@1234
 
@@ -14,6 +17,13 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update
+  #   show-sql: true
 
 eureka:
   client:
