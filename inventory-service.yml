@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: inventory-service
+    name: INVENTORY-SERVICE
 
   config:
     import: optional:configserver:http://localhost:8888
